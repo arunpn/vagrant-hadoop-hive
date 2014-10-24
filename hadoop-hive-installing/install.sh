@@ -23,7 +23,7 @@ fi
 # download Hive 0.11.0 from official site
 if [ ! -f /home/vagrant/hive-0.11.0.tar.gz ]; then
 	echo "Start download Hive 0.11.0..."
-	wget -c http://mirrors.digipower.vn/apache/hive/stable/hive-0.11.0.tar.gz /home/vagrant/hive-0.11.0.tar.gz
+	wget -c https://archive.apache.org/dist/hive/hive-0.11.0/hive-0.11.0.tar.gz /home/vagrant/hive-0.11.0.tar.gz
 
 	# untar the package
 	tar -xvf /home/vagrant/hive-0.11.0.tar.gz
@@ -32,7 +32,9 @@ fi
 # download Hive 0.11.0 from official site
 if [ ! -f /home/vagrant/sqoop-1.4.4.bin__hadoop-1.0.0.tar.gz ]; then
 	echo "Start download sqoop 1.4.4 ..."
-	wget -c http://mirrors.digipower.vn/apache/sqoop/1.4.4/sqoop-1.4.4.bin__hadoop-1.0.0.tar.gz /home/vagrant/sqoop-1.4.4.bin__hadoop-1.0.0.tar.gz
+	wget -c http://archive.apache.org/dist/sqoop/1.4.4/sqoop-1.4.4.bin__hadoop-1.0.0.tar.gz /home/vagrant/sqoop-1.4.4.bin__hadoop-1.0.0.tar.gz
+	wget ftp://ftp.cs.wcupa.edu/pub/rkline/general/jar/mysql-connector-java-5.1.25-bin.jar
+	cp mysql-connector-java-5.1.25-bin.jar ~/sqoop-1.4.4.bin__hadoop-1.0.0/lib/.
 
 	# untar the package
 	tar -xvf /home/vagrant/sqoop-1.4.4.bin__hadoop-1.0.0.tar.gz
